@@ -9958,7 +9958,7 @@ header {
 }
 
 .Modern-Slider .item-1 .image {
-  background-image: url(../img/slide_1.jpg);
+  background-image: url(../slide_1.jpg);
 }
 
 .Modern-Slider .item-2 .image {
@@ -10368,6 +10368,7 @@ header {
   font-weight: 600;
   color: #232323;
   letter-spacing: 0.5px;
+  
 }
 
 #blog .item .text-content span {
@@ -10455,6 +10456,8 @@ header {
 
 /* Footer Style */
 
+
+
 .footer {
   background-color: rgba(12,12,12,0.9);
   height: 80px;
@@ -10462,6 +10465,8 @@ header {
   display: inline-block;
   text-align: center;
   width: 100%;
+  position: fixed;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
 }
 
 .footer p {
@@ -10624,18 +10629,25 @@ header {
 .posts {
   list-style: none;
   padding: 0;
+  text-align: left;
   li {
-    padding: 10px 0;
+    padding: 0 0;
     border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
   }
   .content {
     display: block;
-    margin-left: 60px;
+    
     img {
       display: block;
       padding: 5px 0;
     }
   }
+
+
   .timestamp {
     color: $gray-light;
     display: block;
@@ -10708,3 +10720,4 @@ aside {
     }
   }
 }
+
