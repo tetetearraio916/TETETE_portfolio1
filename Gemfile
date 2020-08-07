@@ -21,9 +21,19 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+#Sass
+gem 'bootstrap-sass','3.4.1'
+#pagination
+gem 'will_paginate','3.1.8'
+gem 'bootstrap-will_paginate','1.0.0'
+#uplode
+gem 'active_storage_validations', '0.8.2'
+#resize
+gem 'mini_magick','4.9.5'
+#aws-s3
+gem 'aws-sdk-s3','1.46.0',require: false
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

@@ -1,0 +1,28 @@
+<div class="page-content">
+     <section id="blog" class="content-section">
+            <div class="section-heading">
+                <section id="first-tab-group" class="tabgroup">
+        <div id="tab1">
+            <ul>
+                <li>
+                    <div class="item">
+                        <%= image_tag @post.display_image if @post.image.attached? %>
+                        <div class="text-content">
+                            <h4><%= @post.title %></h4>
+                            <span><%= @post.content %></span>
+                            
+                            <div class="accent-button button">
+                                <%= link_to "Settings",edit_post_path(@post) %>
+                                <%= link_to "delete", @post, method: :delete,
+                                            data: { confirm: "You sure?" } %>
+                                            
+                            </div>
+                        </div>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+    </section> 
+            </div>
+    </section>
+</div>           

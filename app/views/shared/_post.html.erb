@@ -1,0 +1,28 @@
+<section id="first-tab-group" class="tabgroup">
+    <% @posts.each do |post| %>
+        <div id="tab1">
+            <ul>
+                <li>
+                    <div class="item">
+                        <%= image_tag post.display_image if post.image.attached? %>
+                        <div class="text-content">
+                           
+                            <h4><%= link_to post.title,post %></h4>
+                            <span><%= post.content %></span>
+                            <p>Posted <%= time_ago_in_words(post.created_at) %> ago.
+                                <%= post.created_at %></p>
+                            <div class="accent-button button">
+                                <%= link_to "Settings",edit_post_path(post) %>
+                                <%= link_to "delete", post, method: :delete,
+                                            data: { confirm: "You sure?" } %>
+                            </div>
+                        </div>
+                    </div>
+                </li>                        
+            </ul>
+        </div>
+    <% end %>
+</section> 
+
+
+  

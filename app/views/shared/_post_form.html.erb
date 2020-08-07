@@ -1,0 +1,38 @@
+<%= form_with(model: @post, local: true) do |f| %>
+  <%= render 'shared/error_messages',object: f.object %>                         
+      <fieldset>
+        <div class="col-md-1">
+          <%= f.label :title %>
+        </div>
+        <div class="col-md-12">
+          <%= f.text_field :title, placeholder: "Compose new title..." %>
+        </div>
+      </fieldset>
+                                
+      <fieldset>
+        <div class="col-md-1">
+          <%= f.label :post %>
+        </div>
+        <div class="col-md-12">
+          <%= f.text_area :content, placeholder: "Compose new post..." %>
+        </div>
+      </fieldset>
+      
+      <fieldset>                                                   
+        <div class="col-md-12">                               
+          <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>                             
+          <button type="submit" id="form-submit" class="btn">Posted Now</button>
+        </div>
+      </fieldset>
+<% end %>
+                
+<script type="text/javascript">
+  $("#post_image").bind("change", function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert("Maximum file size is 5MB. Please choose a smaller file.");
+      $("#post_image").val("");
+    }
+  });
+</script>
+    
