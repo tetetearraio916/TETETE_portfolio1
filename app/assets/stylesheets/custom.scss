@@ -3957,6 +3957,10 @@ tbody.collapse.in {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
+
+.ccent-button,.button > .form
+
+
 .input-group {
   position: relative;
   display: table;
@@ -4446,6 +4450,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border: 1px solid transparent;
   border-radius: 4px;
 }
+
+
 .navbar-toggle:focus {
   outline: 0;
 }
@@ -10721,3 +10727,33 @@ aside {
   }
 }
 
+
+
+
+
+  
+.button_to input{
+    width: 130.84x;
+    height: 42px ;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+    background-color: #45489a;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0px 25px;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    border: 0px none;
+    margin: 0px;
+    
+  }
+  
+  .button_to input:hover{
+    background-color:#ffffff;
+    color:#45489a;
+  }
+    

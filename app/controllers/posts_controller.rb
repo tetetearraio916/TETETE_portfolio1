@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @answer = Answer.new
+    @answers = Answer.paginate(page: params[:page])
   end
 
   def edit
@@ -36,8 +37,10 @@ class PostsController < ApplicationController
       render 'edit'
     end
   end
-
-  def delete
+  
+  
+  def destroy
+    @post=Post.find(params[:id])
     @post.destroy
     flash[:success] = "Post deleted"
     redirect_to @post

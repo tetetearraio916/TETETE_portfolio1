@@ -8,4 +8,41 @@
             </div>
         </div>
     </div>    
+
+    <div class="section-content">
+        <div class="tabs-content">
+            <div class="wrapper">
+                <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                    <li><a href="#tab1" class="active">July 2018</a></li>
+                    <li><a href="#tab2">June 2018</a></li>
+                    <li><a href="#tab3">May 2018</a></li>
+                    <li><a href="#tab4">April 2018</a></li>
+                </ul>   
+                
+                <% if @post.answers.any? %>
+                    <h4>Number of answers　<%= @post.answers.count %> </h4>
+                    <ol class="posts">
+                        <%= render 'shared/answer' %>
+                    </ol>
+                <%= will_paginate @answers %>
+                <% end %>
+        
+            </div>
+        </div>
+    </div>
 </section>
+
+<section id="contact" class="content-section">
+    <div id="contact-content">
+        <div class="section-heading">
+            <h1>Contact<br><em>Sentra</em></h1>
+            <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
+            <br>Phasellus luctus odio eget dui imperdiet.</p>        
+        </div>
+        <div class="section-content">
+            <div class="row"> 
+                <%= render 'shared/answer_form' %> 
+            </div>
+        </div>
+    </div>
+</section>            

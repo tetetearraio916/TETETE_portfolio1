@@ -1,9 +1,9 @@
 class Post < ApplicationRecord
-  has_many :answers
-  has_one_attached :image
+  has_many :answers, dependent: :destroy
+  has_one_attached :image 
   default_scope->{order(created_at: :desc)}
   validates:title,presence:true,length:{maximum:50}
-  validates:content,presence:true,length:{maximum:140}
+  validates:content,presence:true,length:{maximum:255}
   validates:image, content_type:{in:%w[image/jpeg image/gif image/png],
                     message:"must be avalid image formaat"},
             size:{less_than:5.megabytes,

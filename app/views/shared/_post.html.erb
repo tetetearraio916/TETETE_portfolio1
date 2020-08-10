@@ -7,15 +7,16 @@
                         <%= image_tag post.display_image if post.image.attached? %>
                         <div class="text-content">
                            
-                            <h4><%= link_to post.title,post %></h4>
+                            <h4><%= link_to post.title,post_path(post) %></h4>
                             <span><%= post.content %></span>
                             <p>Posted <%= time_ago_in_words(post.created_at) %> ago.
                                 <%= post.created_at %></p>
-                            <div class="accent-button button">
-                                <%= link_to "Settings",edit_post_path(post) %>
-                                <%= link_to "delete", post, method: :delete,
-                                            data: { confirm: "You sure?" } %>
-                            </div>
+                                <div class="accent-button button">
+                                <ul>
+                                <li><%= link_to "Settings",edit_post_path(post) %> </li>
+                                <li><%= button_to "delete", post_path(post.id), method: :delete, data: { confirm: "You sure?" } %></li>
+                                </ul>
+                           </div>
                         </div>
                     </div>
                 </li>                        
