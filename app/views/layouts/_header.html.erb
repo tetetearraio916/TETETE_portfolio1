@@ -12,9 +12,6 @@
                 <li><%= link_to "Home",root_path %></li>
                 <li><%= link_to "Index",posts_path %></li>
                 <li><%= link_to "New",new_post_path %></li>
-                <li><a href="#video">Presentation</a></li>
-                <li><a href="#blog">Blog Entries</a></li>
-                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </div>
@@ -22,7 +19,7 @@
 
 <div class="sidebar-navigation hidde-sm hidden-xs">
     <div class="logo">
-        <a href="#">Sen<em>tra</em></a>
+        <a href="#">tetete<em>＠知恵袋</em></a>
     </div>
     <nav>
         <ul>
@@ -37,44 +34,34 @@
                 <%= link_to posts_path do %>
                     <span class="rect"></span>
                     <span class="circle"></span>
-                    Index
+                    Question Posts
                 <% end %>
             </li>
             <li>
                 <%= link_to new_post_path do %>
                     <span class="rect"></span>
                     <span class="circle"></span>
-                    New
+                    Let's ask
                 <% end %>
-            </li>
-            <li>
-                <a href="#video">
-                    <span class="rect"></span>
-                    <span class="circle"></span>
-                    Presentation
-                </a>
-            </li>
-            <li>
-                <a href="#blog">
-                    <span class="rect"></span>
-                    <span class="circle"></span>
-                    Blog Entires
-                </a>
-            </li>
-            <li>
-                <a href="#contact">
-                <span class="rect"></span>
-                <span class="circle"></span>
-                Contact Us
-                </a>
             </li>
         </ul>
     </nav>
-    <ul class="social-icons">
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-    </ul>
+        <ul class="social-icons">
+            <li>
+               <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fd924a5bf45a8441eba5b6ab8031669bd.vfs.cloud9.ap-northeast-1.amazonaws.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                    <i class="fa fa-facebook" data-href="https://d924a5bf45a8441eba5b6ab8031669bd.vfs.cloud9.ap-northeast-1.amazonaws.com/" data-layout="button_count" data-size="small"></i>
+                </a>
+            </li>
+            <li>
+                <%= link_to "http://twitter.com/share?url=#{(root_url)}/&text=家庭教師のワイズの先生です/&hashtags=成績UP" do %>
+                     <i class="fa fa-twitter"></i>
+                <% end %>
+            </li>
+            <li>
+                <%= link_to "https://social-plugins.line.me/lineit/share?url=#{(root_url)}/&text=家庭教師のワイズの先生です/&hashtags=成績UP" do %>
+                     <i class="fab fa-line"></i>
+                <% end %>
+            </li>
+            
+        </ul>    
 </div>

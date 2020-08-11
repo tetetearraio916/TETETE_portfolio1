@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.paginate(page: params[:page])
+    @posts = Post.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @answer = Answer.new
-    @answers = Answer.paginate(page: params[:page])
+    @answers = @post.answers.paginate(page: params[:page], per_page: 5)
   end
 
   def edit

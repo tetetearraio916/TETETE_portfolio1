@@ -1,6 +1,6 @@
 class Answer < ApplicationRecord
   belongs_to :post
-  has_many_attached :image
+  has_one_attached :image
   default_scope -> { order(created_at: :desc) }
   validates :post_id,presence:true
   validates :name,presence:true,length:{maximum:50}

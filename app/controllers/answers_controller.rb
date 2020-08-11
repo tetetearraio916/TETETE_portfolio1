@@ -3,9 +3,9 @@ class AnswersController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @answer = Answer.new
-    @answer.image.attach(params[:answer][:image])
+    @answer_image = @post.answers.build.image.attach(params[:answer][:image])
     
-    if @answer.update(answer_params)
+    if @answer.update(answer_params) && @answer_image.save
       flash[:success] = "Answer created!"
       redirect_to post_path(@post)
     else

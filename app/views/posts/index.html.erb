@@ -1,26 +1,27 @@
 <section id="blog" class="content-section">
     <div class="section-heading">
-        <h1>Blog<br><em>Entries</em></h1>
-        <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
-        <br>Phasellus luctus odio eget dui imperdiet.</p>
+        <h1>Question<br><em>Posts</em></h1>
+        <p>あなたが興味のあるトピックがあるかもしれません。
+        <br>あなたに助力できることを私たちは願っています。</p>
     </div>
     <div class="section-content">
         <div class="tabs-content">
             <div class="wrapper">
+                <%= will_paginate @posts, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
                 <ul class="tabs clearfix" data-tabgroup="first-tab-group">
                     <li><a href="#tab1" class="active">July 2018</a></li>
                     <li><a href="#tab2">June 2018</a></li>
                     <li><a href="#tab3">May 2018</a></li>
                     <li><a href="#tab4">April 2018</a></li>
                 </ul>   
-                <%= will_paginate %>
+                
                 <% if @posts.any? %>
                     <h4>Number of posts　<%= @posts.count %> </h4>
                     <ol class="posts">
                         <%= render 'shared/post' %>
                     </ol>
                 <% end %>
-                <%= will_paginate %>
+              <%= will_paginate @posts, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>   
             </div>
         </div>
     </div>

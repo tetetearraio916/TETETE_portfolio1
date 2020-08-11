@@ -4,21 +4,23 @@
             <ul>
                 <li>
                     <div class="item">
-                        <%= image_tag answer.display_image if answer.image.attached? %>
+                       
                         <div class="text-content">
-                           
-                            <h4><%= answer.name %></h4>
-                            <span><%= answer.comment %></span>
-                             <p>Posted <%= time_ago_in_words(answer.created_at) if answer.created_at %> ago.
-                             <%= answer.created_at %></p>
-                            <div class = "row">
+                            <div class="col-md-12">
+                                <h4><%= answer.name %></h4>
+                                <span><%= answer.comment %></span>
+                            </div>
                             <div class="col-md-4">
-                            <div class="accent-button button">
-                            <ul>
-                                <li><%= button_to "delete",post_answer_path(@post,answer), method: :delete, data: { confirm: "You sure?" },class: "accent-button button" %></li>
-                            </ul>           
+                                 <%= image_tag answer.display_image if answer.image.attached? %>
                             </div>
-                            </div>
+                            <div class="col-md-12">
+                                <p>Posted <%= time_ago_in_words(answer.created_at) if answer.created_at %> ago.
+                                <%= answer.created_at %></p>
+                                <div class="accent-button button">
+                                    <ul>
+                                        <li><%= button_to "delete",post_answer_path(@post,answer), method: :delete, data: { confirm: "You sure?" },class: "accent-button button" %></li>
+                                    </ul>           
+                                </div>
                             </div>
                         </div>
                     </div>

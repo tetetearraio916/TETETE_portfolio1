@@ -1,11 +1,11 @@
 <section id="first-tab-group" class="tabgroup">
     <div id="tab1">
         <div class="item">
-            <%= image_tag @post.display_image if @post.image.attached? %>
+          <%= image_tag @post.display_image if @post.image.attached? %>
             <div class="text-content">
-                <h4><%= @post.title %></h4>
-                <span><%= @post.content %></span>
-                
+                    <h4><%= @post.title %></h4>
+                    <span><%= @post.content %></span>
+               
             </div>
         </div>
     </div>

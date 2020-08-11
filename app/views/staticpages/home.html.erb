@@ -8,12 +8,16 @@
                 </div>
                 <div class="info">
                     <div>
-                    <h1>Beautiful Template<br>Sentra</h1>
-                    <p>Sentra is free Bootstrap CSS Template by templatemo website.<br>
-                       Please share our site link to your friends.</p>
+                    <h1>Ask questions<br>if you don't understand</h1>
+                    <p>わからない事、悩み、人と共有したい事がそれぞれあると思います。<br>
+                       あなたの抱えている問題がここで解決できるよう私たちが全力でサポートします。</p>
                     <div class="white-button button">
-                        <a href="#featured">Discover More</a>
-                    </div>
+                            <%= link_to posts_path do %>
+                              Questions
+                            <% end %>
+                            <%= link_to new_post_path do %>
+                                 Let's ask !
+                            <% end %>
                     </div>
                 </div>
             </div>

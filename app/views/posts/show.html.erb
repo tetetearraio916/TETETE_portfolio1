@@ -12,6 +12,7 @@
     <div class="section-content">
         <div class="tabs-content">
             <div class="wrapper">
+                <%= will_paginate @answers, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>   
                 <ul class="tabs clearfix" data-tabgroup="first-tab-group">
                     <li><a href="#tab1" class="active">July 2018</a></li>
                     <li><a href="#tab2">June 2018</a></li>
@@ -24,9 +25,8 @@
                     <ol class="posts">
                         <%= render 'shared/answer' %>
                     </ol>
-                <%= will_paginate @answers %>
                 <% end %>
-        
+                <%= will_paginate @answers, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>   
             </div>
         </div>
     </div>
@@ -35,9 +35,9 @@
 <section id="contact" class="content-section">
     <div id="contact-content">
         <div class="section-heading">
-            <h1>Contact<br><em>Sentra</em></h1>
-            <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
-            <br>Phasellus luctus odio eget dui imperdiet.</p>        
+            <h1>Please<br><em>Answers</em></h1>
+            <p>親切なあなたへ
+            <br>あなたの答えに私たちは感謝しています。</p>        
         </div>
         <div class="section-content">
             <div class="row"> 
