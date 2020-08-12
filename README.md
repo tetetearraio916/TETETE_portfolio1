@@ -1,6 +1,6 @@
 # TETETE@知恵袋
 
-Herokuへデプロイ済み　アクセスは[こちら](https://tetetearraio916-portfolio1.herokuapp.com/posts#tab2)  
+Herokuへデプロイ済み　アクセスは[こちら](https://tetetearraio916-portfolio1.herokuapp.com/)  
 
 ## Overview
 
