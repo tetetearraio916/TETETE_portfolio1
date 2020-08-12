@@ -1,24 +1,18 @@
-# README
+# TETETE@知恵袋
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Herokuへデプロイ済み　アクセスは[こちら](https://tetetearraio916-portfolio1.herokuapp.com/posts#tab2)  
 
-Things you may want to cover:
+## Overview
 
-* Ruby version
+悩み、疑問などに対する問題の回答、会話ができるようなユーザー間での共有サービス。　　
 
-* System dependencies
+ユーザー自身がこのサイトを作り上げて行って欲しいという思いから、自由に活用できるようにユーザーアカウントは設けていません。　　
 
-* Configuration
+## technology  
 
-* Database creation
+Ruby on RailsにてAPIサーバーを構築。フロントエンドはテンプレートとして配布している[SENTRA](https://templatemo.com/tm-518-sentra)を用いています。  
 
-* Database initialization
+インフラにherokuを採用。Twitter、Facebook、LINEなどのSNSでシェアすることが可能です。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
