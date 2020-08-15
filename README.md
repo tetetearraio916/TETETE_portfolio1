@@ -1,4 +1,13 @@
-# TETETE@知恵袋
+# TETETE@知恵袋　　
+
+# Template:
+[![tetetearraio916](https://circleci.com/gh/tetetearraio916/TETETE_portfolio1.svg?style=svg)](<LINK>)
+
+# Example:
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
+
+# Example for specific branch:
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5)　　
 
 Herokuへデプロイ済み　アクセスは[こちら](https://tetetearraio916-portfolio1.herokuapp.com/)  
 
@@ -14,7 +23,7 @@ Herokuへデプロイ済み　アクセスは[こちら](https://tetetearraio916
 
 Ruby on RailsにてAPIサーバーを構築。フロントエンドはテンプレートとして配布している[SENTRA](https://templatemo.com/tm-518-sentra)を用いています。  
 
-インフラにherokuを採用。Twitter、Facebook、LINEなどのSNSでシェアすることが可能です。
+インフラはデプロイ時にheroku、アップロード画像の保存先としtAWSのS3を使用。Twitter、Facebook、LINEなどのSNSでシェアすることが可能です。
 
 
 
