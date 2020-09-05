@@ -14,7 +14,7 @@ Herokuへデプロイ済み　アクセスは[こちら](https://tetetearraio916
 
 Ruby on RailsにてAPIサーバーを構築。フロントエンドはテンプレートとして配布している[SENTRA](https://templatemo.com/tm-518-sentra)を用いています。  
 
-インフラはデプロイ時にheroku、アップロード画像の保存先としtAWSのS3を使用。Twitter、Facebook、LINEなどのSNSでシェアすることが可能です。
+インフラはデプロイ時にheroku、アップロード画像の保存先としAWSのS3を使用。Twitter、Facebook、LINEなどのSNSでシェアすることが可能です。
 
 
 
